@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import { read, store } from './util/test';
+import { storePublic, readPublic } from './util/test';
 import Web3 from 'web3';
 import './App.css';
 
@@ -9,7 +9,8 @@ class App extends Component {
   componentWillMount() {
     //   window.addEventListener('load', function () {
     // store({ test: 1 })
-    read("0xecfdfcf63bd5c813e8dccf869280c333d2a1bff8")
+    // storePublic("11111111111")
+    readPublic("0xeCFDfcf63Bd5c813e8dccf869280C333d2A1BfF8")
     // });
 
   }

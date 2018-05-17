@@ -1,17 +1,41 @@
 [
 	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "data",
+				"type": "string"
+			}
+		],
+		"name": "storePublicData",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getBalance",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
 		"constant": true,
 		"inputs": [
 			{
-				"name": "",
-				"type": "address"
-			},
-			{
-				"name": "",
-				"type": "uint256"
+				"name": "id",
+				"type": "string"
 			}
 		],
-		"name": "hashData",
+		"name": "verifyData",
 		"outputs": [
 			{
 				"name": "",
@@ -30,7 +54,40 @@
 				"type": "address"
 			}
 		],
-		"name": "getData",
+		"name": "getPrivateData",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getOwner",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "_from",
+				"type": "address"
+			}
+		],
+		"name": "getPublicData",
 		"outputs": [
 			{
 				"name": "",
@@ -49,10 +106,101 @@
 				"type": "string"
 			}
 		],
-		"name": "store",
+		"name": "storePrivateData",
 		"outputs": [],
 		"payable": false,
 		"stateMutability": "nonpayable",
 		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "verifierAdrs",
+				"type": "address[]"
+			},
+			{
+				"name": "id",
+				"type": "string"
+			},
+			{
+				"name": "claimAdr",
+				"type": "address"
+			}
+		],
+		"name": "setVerifiers",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "data",
+				"type": "string"
+			},
+			{
+				"name": "id",
+				"type": "string"
+			}
+		],
+		"name": "createNewVerifyData",
+		"outputs": [],
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "id",
+				"type": "string"
+			},
+			{
+				"name": "claimAdr",
+				"type": "address"
+			}
+		],
+		"name": "finishRopund1",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "claimAdr",
+				"type": "address"
+			},
+			{
+				"name": "vote",
+				"type": "uint8"
+			},
+			{
+				"name": "id",
+				"type": "string"
+			}
+		],
+		"name": "createAVote",
+		"outputs": [],
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "constructor"
 	}
 ]
